@@ -41,6 +41,6 @@ export const menuItems = [
   },
   {
     id: 11,
-    value: "Category name",
+    value: "Category-name",
   },
 ];
