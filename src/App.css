@@ -165,3 +165,92 @@ input {
   background: transparent;
   border: none;
 }
+
+
+/* Carasoul Css */
+
+/* Carousel container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Carousel items */
+.carousel-content {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Show active item with full opacity */
+.carousel-item.active img {
+  opacity: 1;
+}
+
+/* Hover effect to scale and change opacity */
+.carousel-item:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Arrows for navigation */
+.arrow {
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: background 0.3s, color 0.3s;
+  outline: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+
+
+
+
+

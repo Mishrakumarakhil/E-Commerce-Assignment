@@ -19,6 +19,8 @@ const NavBar = () => {
         <input type="text" placeholder="Search something" />
       </div>
       </div>
+
+    
     
     </div>
   );
