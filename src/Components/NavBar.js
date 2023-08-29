@@ -14,11 +14,12 @@ const NavBar = () => {
       </div>
       <div className="menu-conatiner">
         <MenuList />
-      </div>
-      <div className="search-conatiner">
+        <div className="search-conatiner">
         <SearchIcon />
         <input type="text" placeholder="Search something" />
       </div>
+      </div>
+    
     </div>
   );
 };
