@@ -37,6 +37,15 @@
   font-weight: 800;
   line-height: 20px;
 }
+
+
+.menu-conatiner{
+  display: flex;
+align-items: center;
+gap: 44px;
+flex: 1 0 0;
+}
 .main-container {
   flex-grow: 1;
 }
+

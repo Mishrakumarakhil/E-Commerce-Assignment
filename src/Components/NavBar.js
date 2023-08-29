@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/siteLogo.svg";
+import MenuList from "./MenuList";
 
 const NavBar = () => {
   return (
@@ -9,6 +10,9 @@ const NavBar = () => {
           <Logo />
         </div>
         <div className="logo-text">E-COMM</div>
+      </div>
+      <div className="menu-conatiner">
+        <MenuList />
       </div>
     </div>
   );
