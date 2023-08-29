@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/siteLogo.svg";
+import { ReactComponent as SearchIcon } from "../assets/searchIcon.svg";
 import MenuList from "./MenuList";
 
 const NavBar = () => {
@@ -13,6 +14,10 @@ const NavBar = () => {
       </div>
       <div className="menu-conatiner">
         <MenuList />
+      </div>
+      <div className="search-conatiner">
+        <SearchIcon />
+        <input type="text" placeholder="Search something" />
       </div>
     </div>
   );

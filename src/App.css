@@ -152,3 +152,16 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.search-conatiner {
+  display: flex;
+  padding: 12px 0px;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  border-bottom: 1px solid #d4d4d4;
+}
+input {
+  background: transparent;
+  border: none;
+}

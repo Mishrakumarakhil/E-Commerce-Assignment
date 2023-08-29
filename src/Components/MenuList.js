@@ -11,7 +11,7 @@ const MenuList = () => {
     if (menuRef.current) {
       const menuWidth = menuRef.current.offsetWidth;
       const menuItemWidth = 120;
-      const minVisibleItems = 2;
+      const minVisibleItems = 1;
 
       let numVisibleItems = Math.max(
         minVisibleItems,
