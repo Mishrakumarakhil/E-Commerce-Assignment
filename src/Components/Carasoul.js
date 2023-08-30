@@ -23,7 +23,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel" style={{ paddingTop: "5rem" }}>
+    <div className="carousel" style={{ paddingTop: "3rem" }}>
       <div className="carousel-content">
         {images.map((image, index) => (
           <div

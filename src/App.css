@@ -243,6 +243,7 @@ input {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-top: 2rem;
 }
 
 .arrow-class svg {
