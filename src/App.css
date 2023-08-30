@@ -130,9 +130,15 @@
   z-index: 1;
 }
 
+.active-link {
+  color: #333; /* Change the color for active links */
+  background-color: #d3d2d2;
+  padding: 5px;
+}
+
 .submenu div {
   padding: 10px;
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc; */
   cursor: pointer;
 }
 
@@ -170,7 +176,7 @@
 .menu div {
   padding: 10px;
   flex-grow: 1;
-  max-width: 150px;
+  max-width: 170px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }

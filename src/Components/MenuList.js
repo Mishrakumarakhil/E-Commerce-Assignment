@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { menuItems } from "./utils";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const MenuList = () => {
   const [visibleMenuItems, setVisibleMenuItems] = useState([]);
   const [hiddenMenuItems, setHiddenMenuItems] = useState([]);
   const menuRef = useRef(null);
+  const location = useLocation();
 
   const calculateVisibleItems = () => {
     if (menuRef.current) {
@@ -25,6 +26,10 @@ const MenuList = () => {
       setHiddenMenuItems(hiddenItems);
     }
   };
+
+  useEffect(() => {
+    calculateVisibleItems();
+  }, [location]);
 
   useEffect(() => {
     // Calculate visible and hidden menu items on initial load and when the screen width changes
@@ -55,7 +60,11 @@ const MenuList = () => {
         {visibleMenuItems.map((menuItem) => (
           <div key={menuItem.id}>
             <Link
-              className="anchor-link"
+              className={`anchor-link ${
+                location.pathname === `/${menuItem.value.toLowerCase()}`
+                  ? "active-link"
+                  : ""
+              }`}
               to={`/${menuItem.value.toLowerCase()}`}
             >
               {menuItem.value}
@@ -68,7 +77,14 @@ const MenuList = () => {
             <div className="submenu">
               {hiddenMenuItems.map((menuItem) => (
                 <div key={menuItem.id}>
-                  <Link to={`/${menuItem.value.toLowerCase()}`}>
+                  <Link
+                    to={`/${menuItem.value.toLowerCase()}`}
+                    className={`anchor-link ${
+                      location.pathname === `/${menuItem.value.toLowerCase()}`
+                        ? "active-link"
+                        : ""
+                    }`}
+                  >
                     {menuItem.value}
                   </Link>
                 </div>
