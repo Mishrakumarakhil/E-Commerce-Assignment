@@ -165,7 +165,6 @@ input {
   border: none;
 }
 
-
 /* Carasoul Css */
 
 /* Carousel container */
@@ -216,25 +215,26 @@ input {
 }
 
 /* Arrows for navigation */
-.arrow-class{
+.arrow-class {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  gap: 1rem;
 }
-.round{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: grey;
-  margin: 1rem;
 
-
+.arrow-class svg {
+  width: 24px;
+  height: 24px;
+}
+.round {
+  width: 12px;
+  height: 10px !important;
 }
 
 .round.active {
-  border-radius: 2px;
-  background-color: blue;
+  fill {
+    background-color: blue;
+  }
 }
 
 .arrow {
@@ -266,9 +266,3 @@ input {
 .right {
   right: 10px;
 }
-
-
-
-
-
-

@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { ReactComponent as LeftArrow } from "../assets/leftArrow.svg";
+import { ReactComponent as RightArrow } from "../assets/rightArrow.svg";
+import { ReactComponent as DotIndicator } from "../assets/dotIndicator.svg";
+import { ReactComponent as CurrentIndicator } from "../assets/currentIndicator.svg";
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,7 +24,6 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel" style={{ paddingTop: "10rem" }}>
-      
       <div className="carousel-content">
         {images.map((image, index) => (
           <div
@@ -34,23 +37,28 @@ const Carousel = ({ images }) => {
               src={images[currentIndex].path}
               alt={images[currentIndex].alt}
             />
-
           </div>
         ))}
       </div>
       <div className="arrow-class">
-        <button onClick={goToPrevSlide}>&lt;</button>
+        <LeftArrow onClick={goToPrevSlide} />
+
         {images.map((el, idx) => {
-          return (
-            <div
+          return currentIndex === idx ? (
+            <CurrentIndicator
               className={`round ${currentIndex === idx ? "active" : ""}`}
               key={idx}
-            ></div>
+            />
+          ) : (
+            <DotIndicator
+              className={`round ${currentIndex === idx ? "active" : ""}`}
+              key={idx}
+            />
           );
         })}
-        <button onClick={goToNextSlide}>&gt;</button>
+
+        <RightArrow onClick={goToNextSlide} />
       </div>
-      
     </div>
   );
 };
