@@ -192,6 +192,8 @@
 input {
   background: transparent;
   border: none;
+  outline: none;
+  color: white;
 }
 
 /* Carasoul Css */
@@ -211,7 +213,7 @@ input {
   display: flex;
   width: 100%;
   overflow-x: hidden;
-  transition: transform 0.5s ease-in-out;
+
 }
 
 .carousel-item {
@@ -220,7 +222,6 @@ input {
   min-width: 100%;
   display: flex;
   justify-content: center;
-  /* transition: opacity 0.3s ease-in-out; */
 }
 
 .carousel-item img {
@@ -228,19 +229,20 @@ input {
   height: auto;
   object-fit: cover;
   opacity: 0.8;
-  /* transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; */
   cursor: pointer;
+  /* transform: scale(1);
+  transition: transform 1s ease; */
 }
 
-/* Show active item with full opacity */
 .carousel-item.active img {
   opacity: 1;
 }
-
-/* Hover effect to scale and change opacity */
 .carousel-item:hover img {
-  /* transform: scale(1.05); */
+  /* transform: scale(1.2);
+  transition: transform 1s ease; */
   opacity: 1;
+  border-radius: 10px;
+
 }
 
 /* Arrows for navigation */
@@ -250,6 +252,7 @@ input {
   align-items: center;
   gap: 1rem;
   padding-top: 2rem;
+  cursor: pointer;
 }
 
 .arrow-class svg {

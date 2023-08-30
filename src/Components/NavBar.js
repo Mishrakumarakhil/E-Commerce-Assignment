@@ -16,7 +16,7 @@ const NavBar = () => {
         <MenuList />
         <div className="search-conatiner">
           <SearchIcon />
-          <input type="text" placeholder="Search something" />
+          <input type="text" placeholder="Search something"  />
         </div>
       </div>
     </div>
