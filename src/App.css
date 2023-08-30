@@ -220,7 +220,7 @@ input {
 .carousel-item img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   opacity: 0.8;
   /* transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; */
   cursor: pointer;
@@ -276,5 +276,3 @@ input {
   width: 40px;
   height: 40px;
 }
-
-
