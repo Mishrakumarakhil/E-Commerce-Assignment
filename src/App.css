@@ -277,15 +277,4 @@ input {
   height: 40px;
 }
 
-.arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-}
 
-.left {
-  left: 10px;
-}
-
-.right {
-  right: 10px;
-}
