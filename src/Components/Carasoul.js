@@ -19,10 +19,8 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel">
-      <button onClick={goToPrevSlide} className="arrow left">
-        &lt;
-      </button>
+    <div className="carousel" style={{ paddingTop: "10rem" }}>
+      
       <div className="carousel-content">
         {images.map((image, index) => (
           <div
@@ -32,17 +30,27 @@ const Carousel = ({ images }) => {
             }`}
           >
             <img
+              style={{ height: "25rem", width: "25rem", borderRadius: "10px" }}
               src={images[currentIndex].path}
               alt={images[currentIndex].alt}
             />
 
-            {/* <img src={image.path} alt={image.alt} /> */}
           </div>
         ))}
       </div>
-      <button onClick={goToNextSlide} className="arrow right">
-        &gt;
-      </button>
+      <div className="arrow-class">
+        <button onClick={goToPrevSlide}>&lt;</button>
+        {images.map((el, idx) => {
+          return (
+            <div
+              className={`round ${currentIndex === idx ? "active" : ""}`}
+              key={idx}
+            ></div>
+          );
+        })}
+        <button onClick={goToNextSlide}>&gt;</button>
+      </div>
+      
     </div>
   );
 };

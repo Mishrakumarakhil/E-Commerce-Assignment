@@ -1,6 +1,5 @@
 .App {
   width: 100vw;
-  height: 100vh;
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -173,10 +172,10 @@ input {
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
   user-select: none;
+  padding-top: 20rem;
 }
 
 /* Carousel items */
@@ -193,16 +192,15 @@ input {
   min-width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease-in-out;
+  /* transition: opacity 0.3s ease-in-out; */
 }
 
 .carousel-item img {
   max-width: 100%;
   height: auto;
-  display: block;
+  object-fit: contain;
   opacity: 0.8;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  /* transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; */
   cursor: pointer;
 }
 
@@ -213,11 +211,32 @@ input {
 
 /* Hover effect to scale and change opacity */
 .carousel-item:hover img {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   opacity: 1;
 }
 
 /* Arrows for navigation */
+.arrow-class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.round{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  margin: 1rem;
+
+
+}
+
+.round.active {
+  border-radius: 2px;
+  background-color: blue;
+}
+
 .arrow {
   font-size: 24px;
   background: rgba(0, 0, 0, 0.5);
@@ -229,7 +248,6 @@ input {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  transition: background 0.3s, color 0.3s;
   outline: none;
   border-radius: 50%;
   width: 40px;
