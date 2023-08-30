@@ -53,7 +53,7 @@ const Carousel = ({ images }) => {
             <DotIndicator
               className={`round ${currentIndex === idx ? "active" : ""}`}
               key={idx}
-              onClick={()=>setCurrentIndex(idx)}
+              onClick={() => setCurrentIndex(idx)}
             />
           );
         })}

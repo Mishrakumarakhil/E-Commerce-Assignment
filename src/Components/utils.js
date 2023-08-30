@@ -54,7 +54,7 @@ export const menuItems = [
 export const imageArray = [
   {
     id: 1,
-    path:image1,
+    path: image1,
     alt: "Image 1",
   },
   {
@@ -64,7 +64,7 @@ export const imageArray = [
   },
   {
     id: 3,
-    path:image3,
+    path: image3,
     alt: "Image 3",
   },
   {
@@ -74,7 +74,7 @@ export const imageArray = [
   },
   {
     id: 5,
-    path:image5,
+    path: image5,
     alt: "Image 5",
   },
 ];

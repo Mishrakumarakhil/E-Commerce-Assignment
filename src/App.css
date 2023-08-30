@@ -213,7 +213,6 @@ input {
   display: flex;
   width: 100%;
   overflow-x: hidden;
-
 }
 
 .carousel-item {
@@ -242,7 +241,6 @@ input {
   transition: transform 1s ease; */
   opacity: 1;
   border-radius: 10px;
-
 }
 
 /* Arrows for navigation */
